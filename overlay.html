@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>popwindow</title>
+    <style>
+        html{
+            height: 100%;
+        }
+        #layer_grey{
+            background-color: gray;
+            display: none;
+            height: 100%;
+            top:0;
+
+            width: 100%;
+            margin-top: 0;
+            position: absolute;
+        }
+        #popwin{
+            background-color: aqua;
+            border: 5px solid blue;
+            width:500px;
+            position: absolute;
+            height: 300px;
+            top:50%;
+            margin-left: -222px;
+            margin-top: -200px;
+            display: none;
+            left:50%;
+        }
+        #popwin h2{
+            border-bottom: 4px solid blue;
+            text-align: right;
+            background-color: yellowgreen;
+        }
+        #popwin span{
+            background-color: chocolate;
+        }
+    </style>
+    <script>
+        function pop() {
+            document.getElementById('popwin').style.display='block';
+            document.getElementById('layer_grey').style.display='block';
+
+
+        }
+        window.onload = function () {
+            document.getElementById('popwin_close').onclick= function () {
+                console.log(1);
+                document.getElementById('popwin').style.display='none';
+                document.getElementById('layer_grey').style.display='none';
+
+            }
+        }
+    </script>
+</head>
+<body>
+
+<center><button onclick="pop()">popupWindow</button></center>
+<div id="layer_grey"></div>
+
+<div id="popwin">
+    <h2 >
+        <span id="popwin_close">x</span>
+    </h2>
+</div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="function changeClolor() {
+    var outer = document.getElementById('div_outer').getElementsByTagName('img');
+    for (var i=0;i<outer.length;i++) {
+        outer[i].style.background='#333333'
+        console.log('123');
+    }
+}
+changeClolor()">change Color</button>
+<div id="div_outer">
+
+    <img style="background-color: aqua; width: 200px;height: 200px;" alt="">
+    <img style="background-color: aqua; width: 200px;height: 200px;" alt="">
+    <img style="background-color: aqua; width: 200px;height: 200px;" alt="">
+</div>
+</body>
+</html>
